@@ -23,6 +23,16 @@ namespace Auto_Invitation.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(options =>
+                {
+                    /* Authentication options */
+                })
+                .AddGitHub(options =>
+                {
+                    // DEMO
+                    options.ClientId = "49e302895d8b09ea5656";
+                    options.ClientSecret = "98f1bf028608901e9df91d64ee61536fe562064b";
+                });
             services.AddControllersWithViews();
         }
 
@@ -45,6 +55,7 @@ namespace Auto_Invitation.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

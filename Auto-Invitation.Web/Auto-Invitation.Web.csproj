@@ -9,4 +9,8 @@
       <ProjectReference Include="..\Auto-Invitation\Auto-Invitation.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AspNet.Security.OAuth.GitHub" Version="5.0.1" />
+    </ItemGroup>
+
 </Project>
