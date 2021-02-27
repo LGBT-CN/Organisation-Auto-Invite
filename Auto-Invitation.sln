@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto-Invitation", "Auto-Invitation\Auto-Invitation.csproj", "{64E2FE79-BCCD-41C0-9D26-B3D9BE4B01C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto-Invitation.Web", "Auto-Invitation.Web\Auto-Invitation.Web.csproj", "{71EBFC50-9F43-4B3A-9154-E224013BCD3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64E2FE79-BCCD-41C0-9D26-B3D9BE4B01C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E2FE79-BCCD-41C0-9D26-B3D9BE4B01C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E2FE79-BCCD-41C0-9D26-B3D9BE4B01C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E2FE79-BCCD-41C0-9D26-B3D9BE4B01C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71EBFC50-9F43-4B3A-9154-E224013BCD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71EBFC50-9F43-4B3A-9154-E224013BCD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71EBFC50-9F43-4B3A-9154-E224013BCD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71EBFC50-9F43-4B3A-9154-E224013BCD3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

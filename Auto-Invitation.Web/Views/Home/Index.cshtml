@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form action="~/invite" method="post">
+
+        <div class="content">
+            <p>Email: </p>
+            <input type="email" name="email"/>
+            <p>Key: </p>
+            <input type="text" name="apikey"/>
+            <br>
+            <br>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</div>
