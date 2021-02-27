@@ -11,7 +11,7 @@ namespace Auto_Invitation.Web.Controllers
         [Route("/invite")]
         public IActionResult Invite(string email = "", string apikey = "")
         {
-            if (email == "" && apikey == "")
+            if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(apikey))
             {
                 ViewData["H1"] = "Welcome";
                 ViewData["Msg"] = "You should add something. :D";
