@@ -21,7 +21,7 @@ namespace Auto_Invitation.Web.Controllers
             if (!string.IsNullOrWhiteSpace(Shared.Config.Auth) && apikey != Shared.Config.Auth)
             {
                 ViewData["H1"] = "Unauthorized";
-                ViewData["Msg"] = "You don't have permision to do this! :(";
+                ViewData["Msg"] = "You don't have permission to do this! :(";
                 return View();
             }
 
