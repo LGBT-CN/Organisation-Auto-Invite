@@ -2,6 +2,7 @@
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Octokit;
 using Octokit.Internal;
@@ -22,6 +23,8 @@ namespace Auto_Invitation.Web.Controllers
                     var github = new GitHubClient(new ProductHeaderValue("AspNetCoreGitHubAuth"),
                         new InMemoryCredentialStore(new Credentials(accessToken)));
                     var l = await github.User.Email.GetAll();
+                    SignOut(new AuthenticationProperties { },
+                        CookieAuthenticationDefaults.AuthenticationScheme);
                     if (l == null || l.Count < 1)
                     {
                         goto NoVerifiedEmail;
@@ -33,6 +36,7 @@ namespace Auto_Invitation.Web.Controllers
                         email = item.Email;
                         goto AuthPassed;
                     }
+
                     NoVerifiedEmail:
                     ViewData["H1"] = "Sorry";
                     ViewData["Msg"] = "We cannot get an verified email from your GitHub account. :(";
